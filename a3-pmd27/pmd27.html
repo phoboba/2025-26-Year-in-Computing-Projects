@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="pmd27.css">
+</head>
+
+<body>
+    <h1>Guess the Number Game</h1>
+    <div class="container">
+        <div class="game">
+            <!-- PART 1: SELECT A RANGE -->
+            <div id="select-range" class="fix-display">
+                <h2>Select a range to start:</h2>
+                <div class="range">
+                    <label><input type="radio" name="range" value="10"> 1-10</label><br>
+                    <label><input type="radio" name="range" value="100"> 1-100</label><br>
+                    <label><input type="radio" name="range" value="1000"> 1-1000</label><br>
+                </div>
+                <button id="start-btn" disabled>Start</button>
+            </div>
+
+            <!-- PART 2 - PLAY THE GAME -->
+            <div id="play-game" class="hidden">
+                <p id="instruction"></p>
+                <input type="number" id="guess-input" placeholder="Enter your guess">
+                <button id="checkBtn">Check</button>
+                <p id="error"></p>
+                <p id="hint"></p>
+                <p>Guesses left: <span id="guesses-left"></span></p>
+            </div>
+        </div>
+
+        <!-- PART 3 - CREATE GUESS HISTORY -->
+        <div class="game">
+            <div id="guess-history" class="hidden">
+                <p>Your guesses</p>
+                <ul id="guesses-list"></ul>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!-- PART 4 - THE GAME ENDS -->
+    <div id="endgame" class="hidden">
+        <div id="end-content">
+            <h2 id="end-msg"></h2>
+            <button id="playAgainBtn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="pmd27.js"></script>
+</body>
+
+</html>

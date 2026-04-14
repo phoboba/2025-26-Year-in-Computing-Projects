@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: darkseagreen;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+h1 {
+    color: maroon;
+    text-decoration: underline;
+}
+
+/* To show and hide things, I will toggle this! */
+.hidden {
+    display: block;
+    display: none;
+}
+
+/* My display kept breaking, so I moved the 
+flexbox here to append and remove in JS... */
+.fix-display {
+    display: flex;
+    flex-direction: column;
+    background-color: #e7f1ca;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 10px;
+    width: 100%;
+}
+
+/* MAIN GAME INTERFACE */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.game {
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.range {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#endgame {
+    padding: 20px;
+    position: fixed;
+    border: solid 2px gray;
+    background-color: rgb(211, 211, 211);
+}
+
+/* make the play-game and guess-history boxes
+stack when the viewport is under 600px */
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* i had these in the process of making the styles, but then i just
+put the attributes into the fix-display class... */
+
+/* #select-range {
+    background-color: #e7f1ca;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 10px;
+} */
+
+
+/* #play-game {
+    background-color: #e7f1ca;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 10px;
+    width: 100%;
+} */
+
+/* #guess-history {
+    background-color: #e7f1ca;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 10px;
+    width: 100%;
+} */
